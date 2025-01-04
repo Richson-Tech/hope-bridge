@@ -1,22 +1,21 @@
 'use client';
-import { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { useState, useEffect } from 'react';
 import Slide from './Slide';
 
 const slides = [
   {
     id: 1,
-    image: '/images/image3.jpg',
+    image: '/images/slide01.jpg',
     caption: 'Together, We Can Make a Difference',
   },
   {
     id: 2,
-    image: '/images/image1.jpg',
+    image: '/images/slide02.jpg',
     caption: 'Bringing Hope to Every Heart',
   },
   {
     id: 3,
-    image: '/images/image2.jpg',
+    image: '/images/slide03.jpg',
     caption: 'Join Hands to Transform Lives',
   },
 ];
@@ -24,45 +23,26 @@ const slides = [
 const HeroSection = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
 
-  const nextSlide = () => {
-    setCurrentSlide((prev) => (prev + 1) % slides.length);
-  };
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % slides.length);
+    }, 5000); // Change slide every 5 seconds
 
-  const previousSlide = () => {
-    setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length);
-  };
+    return () => clearInterval(interval); // Cleanup on unmount
+  }, []);
 
   return (
     <div className="relative h-screen w-full overflow-hidden">
-      <AnimatePresence mode="wait">
-        <motion.div
-          key={slides[currentSlide].id}
-          initial={{ opacity: 0, x: -100 }}
-          animate={{ opacity: 1, x: 0 }}
-          exit={{ opacity: 0, x: 100 }}
-          transition={{ duration: 0.8 }}
-          className="absolute w-full h-full"
+      {slides.map((slide, index) => (
+        <div
+          key={slide.id}
+          className={`absolute w-full h-full transition-opacity duration-500 ${
+            index === currentSlide ? 'opacity-100 z-10' : 'opacity-0 z-0'
+          }`}
         >
-          <Slide
-            image={slides[currentSlide].image}
-            caption={slides[currentSlide].caption}
-          />
-        </motion.div>
-      </AnimatePresence>
-
-      {/* Navigation Buttons */}
-      <button
-        className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white p-2 rounded"
-        onClick={previousSlide}
-      >
-        Prev
-      </button>
-      <button
-        className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white p-2 rounded"
-        onClick={nextSlide}
-      >
-        Next
-      </button>
+          <Slide image={slide.image} caption={slide.caption} />
+        </div>
+      ))}
     </div>
   );
 };
