@@ -66,36 +66,38 @@ const Help = () => {
   }, []);
 
   return (
-    <div className="dark:bg-gray-900 dark:text-white py-16">
-      <div className="container mx-auto">
-        <h2 className="text-2xl sm:text-4xl font-bold text-center mb-12">
-          Our Impactful Supports
-        </h2>
-        <div
-          className="flex overflow-hidden"
-          data-aos="fade-left"
-          data-aos-duration="20000"
-          data-aos-easing="linear"
-          data-aos-repeat="true"
-        >
-          <div className="flex animate-slide">
-            {services.concat(services).map((service, index) => (
-              <div
-                key={`${service.name}-${index}`}
-                className="flex-shrink-0 mx-6 transition-transform duration-300 hover:scale-110"
-              >
-                <div className="flex items-center justify-center rounded-md shadow-md hover:shadow-lg bg-white p-6">
-                  {service.icon}
+    <section>
+      <div className="dark:bg-gray-900 dark:text-white py-16">
+        <div className="container mx-auto">
+          <h2 className="text-2xl sm:text-4xl font-bold text-center mb-12">
+            Our Impactful Supports
+          </h2>
+          <div
+            className="flex overflow-hidden"
+            data-aos="fade-left"
+            data-aos-duration="20000"
+            data-aos-easing="linear"
+            data-aos-repeat="true"
+          >
+            <div className="flex animate-slide">
+              {services.concat(services).map((service, index) => (
+                <div
+                  key={`${service.name}-${index}`}
+                  className="flex-shrink-0 mx-6 transition-transform duration-300 hover:scale-110"
+                >
+                  <div className="flex items-center justify-center rounded-md shadow-md hover:shadow-lg bg-white p-6">
+                    {service.icon}
+                  </div>
+                  <p className="text-center mt-4 text-lg font-semibold">
+                    {service.name}
+                  </p>
                 </div>
-                <p className="text-center mt-4 text-lg font-semibold">
-                  {service.name}
-                </p>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

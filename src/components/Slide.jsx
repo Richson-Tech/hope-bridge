@@ -2,7 +2,7 @@ import Image from "next/image";
 
 const Slide = ({ image, caption }) => {
   return (
-    <div className="relative w-full h-full">
+    <section className="relative w-full h-full">
       <Image
         src={image}
         alt={caption}
@@ -24,7 +24,7 @@ const Slide = ({ image, caption }) => {
           </button>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 
