@@ -67,7 +67,7 @@ const Navbar = () => {
               <li key={index}>
                 <Link
                   href={link.path}
-                  className="text-white text-xl font-semibold hover:text-secondary-600"
+                  className="text-white text-xl font-semibold transition duration-300 delay-150 hover:-translate-y-1 hover:scale-110 hover:text-[#f3a529] hover:border-2 border-[#f3a529] rounded-md px-3 py-2"
                 >
                   {link.title}
                 </Link>
