@@ -2,3 +2,66 @@
 @tailwind components;
 @tailwind utilities;
 
+
+/* Page Scroll option  */
+html {
+    scroll-behavior: smooth;
+  }
+  
+  /* Web-Kit Scrollbar */
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: #8d8d8d;
+  }
+  
+  *::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  *::-webkit-scrollbar-thumb {
+    background: #8d8d8d;
+    border-radius: 5px;
+  }
+  
+  @layer components {
+    .link {
+      @apply cursor-pointer hover:underline;
+    }
+    .button-outline {
+      @apply rounded-md border-2 border-primary hover:bg-primary/80 hover:text-black font-semibold duration-500 py-2 px-6 text-primary tracking-wider;
+    }
+  
+    .primary-btn {
+      @apply relative overflow-hidden bg-[#146BBC] text-white rounded-lg py-2 px-4 font-semibold transition-all duration-300 ease-in-out z-10;
+    }
+    .secondary-btn {
+      @apply relative overflow-hidden bg-white text-[#146BBC] rounded-lg py-2 px-4 font-semibold transition-all duration-300 ease-in-out z-10;
+    }
+  
+    .primary-btn::before {
+      content: "";
+      @apply absolute inset-0 bg-gradient-to-r from-primary via-[#154c7f] to-[#146BBC] opacity-0 transition-opacity duration-300 ease-in-out -z-10;
+    }
+    .secondary-btn::before {
+      content: "";
+      @apply absolute inset-0 bg-gradient-to-r from-white via-[#86c2e0] to-[#759ccc] opacity-0 transition-opacity duration-300 ease-in-out -z-10;
+    }
+  
+    .primary-btn:hover::before {
+      @apply opacity-100;
+    }
+  
+    @keyframes slide {
+      0% {
+        transform: translateX(0);
+      }
+      100% {
+        transform: translateX(-50%);
+      }
+    }
+  
+    .animate-slide {
+      animation: slide 60s linear infinite;
+    }
+  }
+  
