@@ -69,7 +69,7 @@ const Help = () => {
     <div className="dark:bg-gray-900 dark:text-white py-16">
       <div className="container mx-auto">
         <h2 className="text-2xl sm:text-4xl font-bold text-center mb-12">
-          Our Impactful Services
+          Our Impactful Supports
         </h2>
         <div
           className="flex overflow-hidden"
