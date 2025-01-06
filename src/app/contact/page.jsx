@@ -7,11 +7,11 @@ export default function Contact() {
         <title>Contact Us - OpeBridge</title>
       </Head>
       <div className="max-w-7xl mx-auto py-12 px-6">
-        <h1 className="text-4xl font-bold text-center text-gray-800 mb-8">Contact Us</h1>
+        <h1 className="text-4xl font-bold text-center text-[#f3a529] mb-8">Contact Us</h1>
         <div className="grid md:grid-cols-2 gap-10">
           {/* Contact Form */}
           <div className="bg-white p-8 shadow-lg rounded-lg">
-            <h2 className="text-2xl font-semibold text-gray-700 mb-4">Send Us a Message</h2>
+            <h2 className="text-2xl font-semibold text-[#f3a529] mb-4">Send Us a Message</h2>
             <form className="space-y-6">
               <div>
                 <label htmlFor="name" className="block text-sm font-medium text-gray-600">
@@ -20,7 +20,7 @@ export default function Contact() {
                 <input
                   type="text"
                   id="name"
-                  className="w-full border-b-2 border-gray-300 focus:border-green-500 outline-none p-2"
+                  className="w-full border-b-2 border-gray-300 focus:border-[#f3a529] outline-none p-2"
                   placeholder="Your full name"
                 />
               </div>
@@ -31,7 +31,7 @@ export default function Contact() {
                 <input
                   type="email"
                   id="email"
-                  className="w-full border-b-2 border-gray-300 focus:border-green-500 outline-none p-2"
+                  className="w-full border-b-2 border-gray-300 focus:border-[#f3a529] outline-none p-2"
                   placeholder="Your email address"
                 />
               </div>
@@ -42,13 +42,13 @@ export default function Contact() {
                 <textarea
                   id="message"
                   rows="4"
-                  className="w-full border-b-2 border-gray-300 focus:border-green-500 outline-none p-2"
+                  className="w-full border-b-2 border-gray-300 focus:border-[#f3a529] outline-none p-2"
                   placeholder="Write your message here..."
                 ></textarea>
               </div>
               <button
                 type="submit"
-                className="w-full bg-green-600 text-white py-2 px-4 rounded-md hover:bg-green-700 transition"
+                className="w-full bg-[#f3a529] text-white py-2 px-4 rounded-md hover:bg-[#d98f22] transition"
               >
                 Send Message
               </button>
@@ -56,8 +56,8 @@ export default function Contact() {
           </div>
 
           {/* Contact Information */}
-          <div className="bg-green-50 p-8 shadow-lg rounded-lg">
-            <h2 className="text-2xl font-semibold text-gray-700 mb-4">Contact Information</h2>
+          <div className="bg-[#fef3e0] p-8 shadow-lg rounded-lg">
+            <h2 className="text-2xl font-semibold text-[#f3a529] mb-4">Contact Information</h2>
             <p className="text-gray-600 mb-6">
               We'd love to hear from you! Feel free to reach out to us through any of the methods below.
             </p>
@@ -80,7 +80,7 @@ export default function Contact() {
             <div className="mt-6 flex space-x-4">
               <a
                 href="#"
-                className="text-green-600 hover:text-green-800 transition"
+                className="text-[#f3a529] hover:text-[#d98f22] transition"
                 aria-label="Twitter"
               >
                 <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -89,7 +89,7 @@ export default function Contact() {
               </a>
               <a
                 href="#"
-                className="text-green-600 hover:text-green-800 transition"
+                className="text-[#f3a529] hover:text-[#d98f22] transition"
                 aria-label="Instagram"
               >
                 <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -98,7 +98,7 @@ export default function Contact() {
               </a>
               <a
                 href="#"
-                className="text-green-600 hover:text-green-800 transition"
+                className="text-[#f3a529] hover:text-[#d98f22] transition"
                 aria-label="LinkedIn"
               >
                 <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
