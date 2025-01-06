@@ -2,12 +2,12 @@ import Head from 'next/head';
 
 export default function Contact() {
   return (
-    <div className="bg-gray-100 min-h-screen">
+    <div className="bg-black bg-opacity-50 min-h-screen">
       <Head>
         <title>Contact Us - OpeBridge</title>
       </Head>
       <div className="max-w-7xl mx-auto py-12 px-6">
-        <h1 className="text-4xl font-bold text-center text-[#f3a529] mb-8">Contact Us</h1>
+        <h1 className="text-4xl font-bold text-center text-[#f3a529] mb-8 mt-10">Contact Us</h1>
         <div className="grid md:grid-cols-2 gap-10">
           {/* Contact Form */}
           <div className="bg-white p-8 shadow-lg rounded-lg">
