@@ -16,10 +16,10 @@ const Slide = ({ image, caption }) => {
           {caption}
         </h1>
         <div className="space-x-4">
-          <button className="bg-[#f3a529] text-white py-2 px-6 rounded shadow-lg hover:bg-gray-200 hover:text-black transition">
+          <button className="bg-[#f3a529] text-white py-2 px-6 rounded shadow-lg transition duration-300 delay-150 hover:bg-gray-200 hover:text-black hover:scale-110">
             Donate Funds
           </button>
-          <button className="bg-transparent border border-white rounded-md text-[#f3a529] py-2 px-6 shadow-lg hover:bg-gray-200 transition">
+          <button className="bg-transparent border border-white rounded-md text-[#f3a529] py-2 px-6 shadow-lg transition duration-300 delay-150 hover:bg-gray-200 hover:scale-110">
             Read More
           </button>
         </div>
