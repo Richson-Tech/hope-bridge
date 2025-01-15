@@ -6,7 +6,7 @@ export default function AboutUsSection() {
       {/* Left Side - Image and Stats */}
       <div className="relative">
         <img 
-          src="/images/about.jpg" 
+          src="/images/slide03.jpg" 
           alt="Smiling children" 
           className="rounded-xl w-full max-w-md"
         />
