@@ -1,13 +1,12 @@
-import Image from 'next/image';
-import Slide from "../../public/images/slide3.jpg";
+
 
 export default function AboutUsSection() {
   return (
     <section className="flex flex-col md:flex-row items-center gap-8 p-8">
       {/* Left Side - Image and Stats */}
       <div className="relative">
-        <Image 
-          src={Slide} 
+        <img 
+          src="/images/about.jpg" 
           alt="Smiling children" 
           className="rounded-xl w-full max-w-md"
         />
