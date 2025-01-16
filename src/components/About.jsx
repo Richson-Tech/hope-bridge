@@ -16,7 +16,7 @@ export default function AboutUsSection() {
         <div className="rounded-3xl -translate-x-3 transform -rotate-1 shadow-lg shadow-black xs:w-[85%] absolute bottom-0 left-0 w-full bg-orange-500 text-white py-4 px-6 rounded-b-xl flex justify-around">
           <div className="text-center">
             <p className="text-3xl font-bold">4k+</p>
-            <p>VOLUNTEER</p>
+            <p>VOLUNTEERS</p>
           </div>
           <div className="text-center">
             <p className="text-3xl font-bold">111+</p>
