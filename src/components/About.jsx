@@ -2,7 +2,7 @@
 
 export default function AboutUsSection() {
   return (
-    <section className="flex flex-col md:flex-row items-center gap-8 p-8">
+    <section className="flex flex-col md:flex-row items-center justify-center gap-8 p-8">
       {/* Left Side - Image and Stats */}
       <div className="relative">
         <img 
