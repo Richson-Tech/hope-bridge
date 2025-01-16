@@ -1,14 +1,17 @@
-
-
 export default function AboutUsSection() {
-  return (
-    <section className="flex flex-col md:flex-row items-center justify-center gap-8 p-8">
+    return (
+        
+        <section>
+          <h2 className="text-orange-500 text-center pt-5 text-xl lg:text-4xl font-bold">ABOUT US</h2>
+          <div className="flex flex-col md:flex-row items-center justify-center gap-8 lg:gap-20 p-8">
+              
+         
       {/* Left Side - Image and Stats */}
       <div className="relative">
-        <img 
-          src="/images/slide03.jpg" 
-          alt="Smiling children" 
-          className="rounded-xl w-full max-w-md"
+        <img
+          src="/images/slide03.jpg"
+          alt="Smiling children"
+          className="rounded-xl w-full max-w-lg"
         />
         <div className="rounded-3xl -translate-x-3 transform -rotate-1 shadow-lg shadow-black xs:w-[85%] absolute bottom-0 left-0 w-full bg-orange-500 text-white py-4 px-6 rounded-b-xl flex justify-around">
           <div className="text-center">
@@ -32,12 +35,12 @@ export default function AboutUsSection() {
 
       {/* Right Side - Text Content */}
       <div className="flex flex-col gap-6 max-w-lg">
-        <h2 className="text-orange-500 text-xl font-bold">ABOUT US</h2>
         <h1 className="text-4xl font-bold leading-tight">
           Our Work Promise To Uphold The Trust Placed
         </h1>
         <p className="text-gray-600">
-          Repellendus litora velit irure ea nostrud cum autem, quam. Gravida harum incidunt varius voluptat facilisi purus.
+          Repellendus litora velit irure ea nostrud cum autem, quam. Gravida
+          harum incidunt varius voluptat facilisi purus.
         </p>
         <ul className="list-none space-y-2">
           <li className="flex items-center">
@@ -62,7 +65,8 @@ export default function AboutUsSection() {
             Learn More
           </button>
         </div>
-      </div>
+                </div>
+                </div>
     </section>
   );
 }
