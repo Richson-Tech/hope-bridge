@@ -13,7 +13,7 @@ const cardData = [
     description:
       "Join our team and help us make a difference in the community.",
     buttonText: "Join Us Now",
-    animation: "fade-up", // Animation type
+    animation: "fade-up",
   },
   {
     id: 2,
@@ -21,7 +21,7 @@ const cardData = [
     title: "Donate to Support",
     description: "Your contributions will go a long way to help those in need.",
     buttonText: "Donate Now",
-    animation: "fade-down", // Animation type
+    animation: "fade-down",
   },
   {
     id: 3,
@@ -29,7 +29,7 @@ const cardData = [
     title: "Become a Partner",
     description: "Collaborate with us to drive positive change.",
     buttonText: "Learn More",
-    animation: "fade-left", // Animation type
+    animation: "fade-left",
   },
 ];
 
