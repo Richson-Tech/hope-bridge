@@ -35,7 +35,7 @@ const cardData = [
 
 const CardsSection = () => {
   useEffect(() => {
-    AOS.init({ duration: 1000 }); // Initialize AOS with animation duration
+    AOS.init({ duration: 1000 }); 
   }, []);
 
   return (
@@ -52,7 +52,7 @@ const CardsSection = () => {
           <div
             key={card.id}
             className="bg-white h-80 w-80 p-6 rounded-lg shadow-md text-center flex flex-col items-center"
-            data-aos={card.animation} // Apply AOS animation
+            data-aos={card.animation} 
           >
             <div className="text-orange-500 mb-4">{card.icon}</div>
             <h2 className="text-xl font-semibold mb-2">{card.title}</h2>
