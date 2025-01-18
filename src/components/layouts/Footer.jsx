@@ -1,4 +1,22 @@
 export default function Footer() {
+  const about = [
+    {
+      id: 1,
+      title: "projects",
+      path: "#",
+    },
+    {
+      id: 2,
+      title: "Donate",
+      path: "#",
+    },
+    {
+      id: 3,
+      title: "Contact",
+      path: "#",
+    },
+  ];
+
   return (
     <footer className="bg-[#46433f] text-white py-8">
       <div className="container mx-auto px-4 grid grid-cols-1 md:grid-cols-4 gap-8">
@@ -16,25 +34,17 @@ export default function Footer() {
           <h3 className="text-xl font-semibold mb-4">Quick Links</h3>
           <ul className="space-y-2">
             <li>
-              <a href="/about" className="hover:underline">
+              <a href="/about" className="hover:underline hover:text-orange-500">
                 About
               </a>
             </li>
-            <li>
-              <a href="/projects" className="hover:underline">
-                Projects
-              </a>
-            </li>
-            <li>
-              <a href="/donate" className="hover:underline">
-                Donate
-              </a>
-            </li>
-            <li>
-              <a href="/contact" className="hover:underline">
-                Contact
-              </a>
-            </li>
+            {about.map((about) => (
+              <li className="cursor-pointer hover:translate-x-1 duration-300 hover:text-orange-500 space-x-1">
+                <a href={about.path} key={about.id} className="hover:underline">
+                  {about.title}
+                </a>
+              </li>
+            ))}
           </ul>
         </div>
 

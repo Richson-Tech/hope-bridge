@@ -25,10 +25,10 @@ export default function AboutUsSection() {
           <img
             src="/images/slide03.jpg"
             alt="Smiling children"
-            className="rounded-xl w-full max-w-lg"
+            className="rounded-xl w-full max-w-2xl"
           />
           <div
-            className="rounded-3xl -translate-x-3 transform -rotate-1 shadow-lg shadow-black xs:w-[85%] absolute bottom-0 left-0 w-full bg-orange-500 text-white py-4 px-6 rounded-b-xl flex justify-around"
+            className="rounded-3xl -translate-x-4 transform -rotate-4 shadow-lg shadow-black xs:w-[85%] absolute bottom-0 left-0 w-full bg-orange-500 text-white py-4 px-6 rounded-b-xl flex justify-around"
             data-aos="fade-up"
           >
             <div className="text-center">
