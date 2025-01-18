@@ -47,7 +47,7 @@ const CardsSection = () => {
           Get involved and help us create a better world.
         </p>
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-10 justify-center">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-10 lg:gap-20 justify-center">
         {cardData.map((card) => (
           <div
             key={card.id}

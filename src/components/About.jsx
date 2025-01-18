@@ -9,7 +9,7 @@ export default function AboutUsSection() {
   }, []);
 
   return (
-    <section>
+    <section id='about'>
       <h2
         className="text-orange-500 text-center pt-5 text-xl lg:text-4xl font-bold"
         data-aos="fade-up"

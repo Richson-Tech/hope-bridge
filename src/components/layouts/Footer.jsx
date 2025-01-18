@@ -18,7 +18,7 @@ export default function Footer() {
   ];
 
   return (
-    <footer className="bg-[#46433f] text-white py-8">
+    <footer id="contact" className="bg-[#46433f] text-white py-8">
       <div className="container mx-auto px-4 grid grid-cols-1 md:grid-cols-4 gap-8">
         <div>
           <h3 className="text-xl font-semibold mb-4">About Us</h3>
