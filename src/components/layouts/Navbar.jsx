@@ -2,7 +2,6 @@
 import Link from "next/link";
 import React, { useState, useEffect, useRef } from "react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/solid";
-import Image from "next/image";
 import MenuOverlay from "./MenuOverlay";
 
 const navLinks = [
@@ -14,7 +13,21 @@ const navLinks = [
 
 const Navbar = () => {
   const [navbarOpen, setNavbarOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
   const menuRef = useRef(null);
+
+  // Track scroll position to toggle blur effect and text color
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 10);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   // Close navbar if clicking outside the menu
   useEffect(() => {
@@ -36,11 +49,19 @@ const Navbar = () => {
   }, [navbarOpen]);
 
   return (
-    <nav className="fixed mx-auto border border-[#33353F] top-0 left-0 right-0 z-40 bg-transparent bg-opacity-100">
+    <nav
+      className={`fixed top-0 left-0 right-0 z-40 transition-all duration-300 ${
+        isScrolled
+          ? "bg-white/80 backdrop-blur-md shadow-md text-black"
+          : "bg-transparent text-white"
+      }`}
+    >
       <div className="flex container lg:py-4 flex-wrap items-center justify-between mx-auto px-4 py-2">
         <Link
           href={"/"}
-          className="text-2xl md:text-5xl text-white font-semibold"
+          className={`text-2xl md:text-5xl font-semibold transition-colors duration-300 ${
+            isScrolled ? "text-black" : "text-white"
+          }`}
         >
           LOGO
         </Link>
@@ -48,14 +69,22 @@ const Navbar = () => {
           {!navbarOpen ? (
             <button
               onClick={() => setNavbarOpen(true)}
-              className="flex items-center px-3 py-2 border rounded border-slate-200 text-slate-200 hover:text-white hover:border-white"
+              className={`flex items-center px-3 py-2 border rounded ${
+                isScrolled
+                  ? "border-gray-800 text-gray-800 hover:text-black hover:border-black"
+                  : " text-gray-200 hover:text-white hover:border-white"
+              }`}
             >
               <Bars3Icon className="h-5 w-5" />
             </button>
           ) : (
             <button
               onClick={() => setNavbarOpen(false)}
-              className="flex items-center px-3 py-2 border rounded border-slate-200 text-slate-200 hover:text-white hover:border-white"
+              className={`flex items-center px-3 py-2 border rounded ${
+                isScrolled
+                  ? "border-gray-800 text-gray-800 hover:text-black hover:border-black"
+                  : "border-gray-400 text-gray-200 hover:text-white hover:border-white"
+              }`}
             >
               <XMarkIcon className="h-5 w-5" />
             </button>
@@ -67,7 +96,11 @@ const Navbar = () => {
               <li key={index}>
                 <Link
                   href={link.path}
-                  className="text-white text-xl font-semibold transition duration-300 delay-150 hover:-translate-y-1 hover:scale-110 hover:text-[#f3a529] hover:border-2 border-[#f3a529] rounded-md px-3 py-2"
+                  className={`text-xl font-semibold transition duration-300 px-3 py-2 rounded-md ${
+                    isScrolled
+                      ? "text-black hover:text-orange-500 hover:border-orange-500 border-2"
+                      : "text-white hover:text-orange-500 hover:border-orange-500 border-2"
+                  }`}
                 >
                   {link.title}
                 </Link>
