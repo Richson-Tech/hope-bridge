@@ -34,7 +34,10 @@ export default function Footer() {
           <h3 className="text-xl font-semibold mb-4">Quick Links</h3>
           <ul className="space-y-2">
             <li>
-              <a href="/about" className="hover:underline hover:text-orange-500">
+              <a
+                href="/about"
+                className="hover:underline hover:text-orange-500"
+              >
                 About
               </a>
             </li>
@@ -82,7 +85,8 @@ export default function Footer() {
       <div className="border-t border-gray-700 mt-8 pt-4 text-center">
         <p className="text-sm">
           © {new Date().getFullYear()} HopeBridge. All Rights Reserved.
-        </p>
+              </p>
+              <p className="font-semibold">Created by Richson-tech</p>
       </div>
     </footer>
   );
