@@ -35,13 +35,15 @@ const cardData = [
 
 const CardsSection = () => {
   useEffect(() => {
-    AOS.init({ duration: 1000 }); 
+    AOS.init({ duration: 1000 });
   }, []);
 
   return (
     <div className="flex flex-col items-center px-4 py-8 bg-gray-100">
       <div className="text-center mb-8">
-        <p className="text-orange-500 font-semibold text-xl">GET INVOLVED</p>
+        <p className="text-orange-500 font-semibold text-xl lg:text-3xl">
+          GET INVOLVED
+        </p>
         <h1 className="text-3xl font-bold">Make a Difference</h1>
         <p className="text-gray-600">
           Get involved and help us create a better world.
@@ -51,8 +53,8 @@ const CardsSection = () => {
         {cardData.map((card) => (
           <div
             key={card.id}
-            className="bg-white h-80 w-80 p-6 rounded-lg shadow-md text-center flex flex-col items-center"
-            data-aos={card.animation} 
+            className="bg-white h-80 w-80 p-6 rounded-lg shadow-md text-center flex flex-col items-center hover:shadow-2xl transition-transform duration-300 transform hover:scale-105"
+            data-aos={card.animation}
           >
             <div className="text-orange-500 mb-4">{card.icon}</div>
             <h2 className="text-xl font-semibold mb-2">{card.title}</h2>
