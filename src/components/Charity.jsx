@@ -34,7 +34,7 @@ const CharitySection = () => {
         </div>
 
         <div className="relative h-full flex flex-col items-center justify-center px-4 text-center">
-          <p className="text-orange-400 mb-4">GET INVOLVE</p>
+          <p className="text-orange-400 mb-4 text-3xl font-bold">GET INVOLVE</p>
           <h1 className="text-4xl md:text-6xl font-bold max-w-4xl mb-8">
             We've Funded 12,503 Charity Projects For 25M People Around The World
           </h1>

@@ -32,10 +32,10 @@ const BlogSection = () => {
       <div className="max-w-7xl mx-auto">
         <div className="flex justify-between items-center mb-12" data-aos="fade-up">
           <div>
-            <p className="text-orange-400 font-medium mb-2">INSIGHTS AND UPDATE</p>
+            <p className="text-orange-500 font-medium mb-2">INSIGHTS AND UPDATE</p>
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900">Our Recent Blog And News</h2>
           </div>
-          <button className="bg-orange-400 text-white px-6 py-2 rounded-lg hover:bg-orange-500 transition-colors">
+          <button className="bg-orange-500 text-white px-6 py-2 rounded-lg hover:bg-orange-600 transition-colors">
             View All Blog
           </button>
         </div>
@@ -52,7 +52,7 @@ const BlogSection = () => {
                   <span className="inline-block px-4 py-1 bg-orange-100 text-orange-500 rounded-full text-sm font-medium mb-4">
                     {post.category}
                   </span>
-                  <h3 className="text-2xl font-bold text-gray-900 mb-3 group-hover:text-orange-400 transition-colors">
+                  <h3 className="text-2xl font-bold text-gray-900 mb-3 group-hover:text-orange-500 transition-colors">
                     {post.title}
                   </h3>
                   <p className="text-gray-600">
