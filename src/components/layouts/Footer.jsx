@@ -33,7 +33,7 @@ export default function Footer() {
         <div>
           <h3 className="text-xl font-semibold mb-4">Quick Links</h3>
           <ul className="space-y-2">
-            <li>
+            <li className="cursor-pointer hover:translate-x-1 duration-300 space-x-1">
               <a
                 href="/about"
                 className="hover:underline hover:text-orange-500"
