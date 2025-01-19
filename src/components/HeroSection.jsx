@@ -32,18 +32,19 @@ const HeroSection = () => {
   }, []);
 
   return (
-    <section className="relative h-screen w-full overflow-hidden">
-      {slides.map((slide, index) => (
-        <div
-          key={slide.id}
-          className={`absolute w-full h-full transition-opacity duration-500 container${
-            index === currentSlide ? "opacity-100 z-10" : "opacity-0 z-0"
-          }`}
-        >
-          <Slide image={slide.image} caption={slide.caption} />
-        </div>
-      ))}
-    </section>
+    <section className="relative h-screen w-full max-w-full overflow-hidden">
+    {slides.map((slide, index) => (
+      <div
+        key={slide.id}
+        className={`absolute w-full h-full transition-opacity duration-500 ${
+          index === currentSlide ? "opacity-100 z-10" : "opacity-0 z-0"
+        }`}
+      >
+        <Slide image={slide.image} caption={slide.caption} />
+      </div>
+    ))}
+  </section>
+  
   );
 };
 
