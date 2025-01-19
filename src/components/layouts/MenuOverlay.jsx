@@ -12,3 +12,5 @@ const MenuOverlay = ({ links, closeMenu }) => {
     </ul>
   );
 };
+
+export default MenuOverlay;
