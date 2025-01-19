@@ -1,11 +1,54 @@
 'use client';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import AOS from 'aos';
-import 'aos/dist/aos.css'; 
+import 'aos/dist/aos.css';
 
 export default function AboutUsSection() {
+  const [stats, setStats] = useState({
+    volunteers: 0,
+    sponsors: 0,
+    branches: 0,
+    awards: 0,
+  });
+
   useEffect(() => {
-    AOS.init({ duration: 1000 }); 
+    AOS.init({ duration: 1000 });
+
+    // Countdown animation logic
+    const finalStats = { volunteers: 4000, sponsors: 111, branches: 36, awards: 22 };
+    const duration = 2000; // Duration of the animation in ms
+    const interval = 30; // Interval between updates in ms
+    const steps = duration / interval;
+
+    const incrementValues = {
+      volunteers: Math.ceil(finalStats.volunteers / steps),
+      sponsors: Math.ceil(finalStats.sponsors / steps),
+      branches: Math.ceil(finalStats.branches / steps),
+      awards: Math.ceil(finalStats.awards / steps),
+    };
+
+    let currentStats = { ...stats };
+    const timer = setInterval(() => {
+      currentStats = {
+        volunteers: Math.min(currentStats.volunteers + incrementValues.volunteers, finalStats.volunteers),
+        sponsors: Math.min(currentStats.sponsors + incrementValues.sponsors, finalStats.sponsors),
+        branches: Math.min(currentStats.branches + incrementValues.branches, finalStats.branches),
+        awards: Math.min(currentStats.awards + incrementValues.awards, finalStats.awards),
+      };
+
+      setStats(currentStats);
+
+      if (
+        currentStats.volunteers === finalStats.volunteers &&
+        currentStats.sponsors === finalStats.sponsors &&
+        currentStats.branches === finalStats.branches &&
+        currentStats.awards === finalStats.awards
+      ) {
+        clearInterval(timer);
+      }
+    }, interval);
+
+    return () => clearInterval(timer);
   }, []);
 
   return (
@@ -32,19 +75,19 @@ export default function AboutUsSection() {
             data-aos="fade-up"
           >
             <div className="text-center">
-              <p className="text-3xl font-bold">4k+</p>
+              <p className="text-3xl font-bold">{stats.volunteers}+</p>
               <p>VOLUNTEERS</p>
             </div>
             <div className="text-center">
-              <p className="text-3xl font-bold">111+</p>
+              <p className="text-3xl font-bold">{stats.sponsors}+</p>
               <p>SPONSORS</p>
             </div>
             <div className="text-center">
-              <p className="text-3xl font-bold">36</p>
+              <p className="text-3xl font-bold">{stats.branches}</p>
               <p>BRANCHES</p>
             </div>
             <div className="text-center">
-              <p className="text-3xl font-bold">22+</p>
+              <p className="text-3xl font-bold">{stats.awards}+</p>
               <p>AWARDS</p>
             </div>
           </div>
