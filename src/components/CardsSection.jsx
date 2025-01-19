@@ -57,7 +57,7 @@ const CardsSection = () => {
             <div className="text-orange-500 mb-4">{card.icon}</div>
             <h2 className="text-xl font-semibold mb-2">{card.title}</h2>
             <p className="text-gray-600 mb-4">{card.description}</p>
-            <button className="bg-orange-500 text-white px-6 py-2 rounded-full hover:bg-orange-500">
+            <button className="bg-orange-500 text-white px-6 py-2 rounded-full hover:bg-orange-600">
               {card.buttonText}
             </button>
           </div>
