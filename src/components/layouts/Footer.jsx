@@ -90,7 +90,7 @@ export default function Footer() {
           © {new Date().getFullYear()} HopeBridge. All Rights Reserved.
         </p>
         <a
-          href="https://github.com/Richson-Tech?"
+          href="https://folorunsho-ahmed.vercel.app/"
           target="_blank"
           rel="noopener noreferrer"
           className="font-semibold"
