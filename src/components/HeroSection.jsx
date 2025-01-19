@@ -36,7 +36,7 @@ const HeroSection = () => {
       {slides.map((slide, index) => (
         <div
           key={slide.id}
-          className={`absolute w-full h-full transition-opacity duration-500 ${
+          className={`absolute w-full h-full transition-opacity duration-500 container${
             index === currentSlide ? "opacity-100 z-10" : "opacity-0 z-0"
           }`}
         >
