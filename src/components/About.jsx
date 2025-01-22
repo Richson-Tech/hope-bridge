@@ -8,7 +8,6 @@ export default function AboutUsSection() {
     volunteers: 0,
     sponsors: 0,
     branches: 0,
-    awards: 0,
   });
 
   useEffect(() => {
@@ -24,7 +23,6 @@ export default function AboutUsSection() {
       volunteers: Math.ceil(finalStats.volunteers / steps),
       sponsors: Math.ceil(finalStats.sponsors / steps),
       branches: Math.ceil(finalStats.branches / steps),
-      awards: Math.ceil(finalStats.awards / steps),
     };
 
     let currentStats = { ...stats };
@@ -33,7 +31,6 @@ export default function AboutUsSection() {
         volunteers: Math.min(currentStats.volunteers + incrementValues.volunteers, finalStats.volunteers),
         sponsors: Math.min(currentStats.sponsors + incrementValues.sponsors, finalStats.sponsors),
         branches: Math.min(currentStats.branches + incrementValues.branches, finalStats.branches),
-        awards: Math.min(currentStats.awards + incrementValues.awards, finalStats.awards),
       };
 
       setStats(currentStats);
@@ -75,20 +72,18 @@ export default function AboutUsSection() {
             data-aos="fade-up"
           >
             <div className="text-center">
-              <p className="text-3xl font-bold">{stats.volunteers}+</p>
-              <p>VOLUNTEERS</p>
+              <p className="text-xl lg:text-3xl font-bold">{stats.volunteers}+</p>
+              <p className='text-sm lg:text-lg px-2'>VOLUNTEERS</p>
             </div>
             <div className="text-center">
-              <p className="text-3xl font-bold">{stats.sponsors}+</p>
-              <p>SPONSORS</p>
+              <p className="text-xl lg:text-3xl font-bold">{stats.sponsors}+</p>
+              <p className='text-sm lg:text-lg px-2'>SPONSORS</p>
             </div>
             <div className="text-center">
-              <p className="text-3xl font-bold">{stats.branches}</p>
-              <p>BRANCHES</p>
+              <p className="text-xl lg:text-3xl font-bold">{stats.branches}</p>
+              <p className='text-sm lg:text-lg px-2'>BRANCHES</p>
             </div>
             <div className="text-center">
-              <p className="text-3xl font-bold">{stats.awards}+</p>
-              <p>AWARDS</p>
             </div>
           </div>
         </div>
