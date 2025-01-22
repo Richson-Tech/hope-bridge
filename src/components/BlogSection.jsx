@@ -31,7 +31,7 @@ const BlogSection = () => {
 
   return (
     <section id="blog">
-      <div className="py-16 px-4 md:px-8 bg-white container">
+      <div className="py-16 px-4 md:px-8 bg-white">
         <div className="max-w-7xl mx-auto">
           <div
             className="flex justify-between items-center mb-12"
