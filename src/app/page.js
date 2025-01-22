@@ -9,7 +9,7 @@ import HeroSection from "@/components/HeroSection";
 
 export default function Home() {
   return (
-    <main className="w-full max-w-full">
+    <main className="">
       <HeroSection />
       <Help />
       <CardsSection />
