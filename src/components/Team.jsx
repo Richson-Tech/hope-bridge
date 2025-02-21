@@ -30,9 +30,9 @@ const TeamSection = () => {
 
   useEffect(() => {
     AOS.init({
-      duration: 1000, // Animation duration
-      easing: 'ease-in-out', // Easing function for smooth animations
-      once: true, // Animations will only trigger once
+      duration: 1000, 
+      easing: 'ease-in-out', 
+      once: true, 
     });
   }, []);
 
@@ -51,7 +51,7 @@ const TeamSection = () => {
             <div 
               key={index}
               className="relative group overflow-hidden rounded-lg bg-white shadow-lg"
-              data-aos="fade-up" // AOS fade-up animation
+              data-aos="fade-up" 
             >
               {/* Image Container */}
               <div className="relative h-[400px] w-full">
