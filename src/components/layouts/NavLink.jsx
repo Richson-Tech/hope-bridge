@@ -1,8 +1,8 @@
 import Link from "next/link";
-import FacebookIcon from "@/icons/facebook-circle.svg";
-import TwitterXIcon from "@/icons/twitter-x.svg";
-import YoutubeIcon from "@/icons/youtube-fill.svg";
-import InstagramIcon from "@/icons/instagram-fill.svg";
+import FacebookIcon from "@/app/assets/icons/facebook-circle.svg";
+import TwitterXIcon from "@/app/assets/icons/twitter-x.svg";
+import YoutubeIcon from "@/app/assets/icons/youtube-fill.svg";
+import InstagramIcon from "@/app/assets/icons/instagram-fill.svg";
 
 const NavLink = ({ href, title }) => {
   return (
